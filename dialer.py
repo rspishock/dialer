@@ -1,6 +1,8 @@
 from random import randint
 from time import sleep
 from sys import exit
+import argparse
+import pyttsx3
 
 
 def create_number():
@@ -17,16 +19,27 @@ def create_number():
     return str(final)
 
 
+message = 'Hello Senator, it\'s time for you to do the job that you were elected for.'
+
 while True:
     try:
+        # generate 'from' number
         test = create_number()
-        # print(test)
         final_number = (f'({test[0:3]}) {test[3:6]}-{test[6:]}')
         print(f'Number: {final_number}')
-
-        print('Sleep')
         sleep(5)
+
+        # play message
+        engine = pyttsx3.init()
+        engine.say(message)
+        engine.runAndWait()
+
+        # wait 5 minutes for next call
+        print('Sleep')
+        sleep(5)  # change to 300 for 5 minutes
         print()
     except KeyboardInterrupt:
         print('Quitting script.')
         exit()
+
+
