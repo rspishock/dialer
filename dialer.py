@@ -29,8 +29,8 @@ def progress_bar():
 
 
 message = 'Hello Senator.  For too long, you\'ve held a position of great importance in this country, living off of ' \
-          'the tax payers dollar but failed to perform your duties.  It\'s time for you to do the job that you were ' \
-          'elected for.'
+          'the tax payers dollar but you have failed to perform your duties.  It\'s time for you to do the job that ' \
+          'you were elected for.'
 total_calls = 1
 
 while True:
