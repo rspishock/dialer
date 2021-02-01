@@ -76,4 +76,4 @@ while True:
             exit()
     else:
         print(f'You have dialed {target} a total of {count} times.')
-        break
+        exit()
